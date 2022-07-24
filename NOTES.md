@@ -69,3 +69,21 @@ ACID Transactions
 + Data volume is large
 + Data velocity is low
 + Lagency SLAs are not aggressive
+
+## Spark
+
++ Scatter/gather paradigm(similar to MapReduce)
++ More general data models(RDDs)
++ More general programming model(transform/action)
++ Storage agnostic
+
+### What's an RDD?
+
++ Bigger than a computer
++ Rea from an input source
++ Output of a pure function
++ Immutable
++ Typed
++ Ordered
++ Lazily e evaluated
++ Partitioned
