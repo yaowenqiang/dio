@@ -87,3 +87,35 @@ ACID Transactions
 + Ordered
 + Lazily e evaluated
 + Partitioned
++ Collection of things
+
+## Storm
+
+> designed at twitter
+
+### Storm Goals
+
++ Stream data processing
++ Friendlier programming model than message-passing
++ At-least-once processing semantics
++ Horizontal scalability, fault tolerance
++ Fast answers on massive scale data
+
+### Programming Model
+
++ Stream: a sequence of tuples(probably lots)
++ Spout(水龙头): a source of streams
++ Bolt(螺栓,处理单元): applies a function an input stream, produce one ore more output streams
++ Topology: a graph of spouts, and bolts, a "Job" that runs indefinitely
+
+
+### Architecture
+
++ Nimbus - central coordinator of jobs
++ zookeeper
++ Supervisor - a node that performs processing
++ Task: a thread of bolt or sprout execution
++ Worker: a JVM process where a topology executes
+
+
+
