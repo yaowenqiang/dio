@@ -117,5 +117,27 @@ ACID Transactions
 + Task: a thread of bolt or sprout execution
 + Worker: a JVM process where a topology executes
 
+### Stream Grouping(Partition)
+
++ Assign tuples to tasks through a consistent-hashing-like mechanism
++ Configurable
+  + Shuffle Grouping: random assignment
+  + Fields Grouping: mod hash of subset of tuple fields
+  + All Grouping: send to every tasks
+
+
+## Synchronization
+
+## Lambda architecture
+
+
++ System input is an event stream
++ Events are immutable!
++ Batch and stream processing are functional
+
+> http://nathanmarz.com/blog/how-to-beat-the-cap-theorem.html
+
+
+
 
 
