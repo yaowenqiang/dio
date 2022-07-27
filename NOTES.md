@@ -138,6 +138,29 @@ ACID Transactions
 > http://nathanmarz.com/blog/how-to-beat-the-cap-theorem.html
 
 
+## Sharding
+
+
+## Messaging introduction
+
++ Means of loosely coupling subsystems
++ messages are consumed by subscribers
++ Created by one ore more producers
++ Organized into topics
++ Processed by brokers
++ Usually persistent over the short term
+
+### Messaging Problems
+
++ What if a topic get too big for one computer?
++ What if one computer is not reliable enough?
++ How strongly can be guarantee delivery?
+
+## Kafka
+
+
+
+
 
 
 
