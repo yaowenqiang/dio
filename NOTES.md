@@ -158,6 +158,48 @@ ACID Transactions
 
 ## Kafka
 
++ Distributed messagequeue
++ Horizontally scalable, fault-tolerant
++ Durable
++ Fast
+  + 100s MB reads and writes/second
+  + Thousands of clients
+  + per broker!
++ Widely deployed
++ JVM based(written in Scala)
++ Native Java and Scala APIs(Akka option)
++ Binary wire protocol
++ Start at three nodes and grow!
+
+
+### Definitions
+
++ Message: an immutable  array of bytes
++ Topic: a feed of feeds
++ Producer: a process that publishes messages to a topic
++ Consumer: a single-threaded process that subscribes to a topic
++ Broker: one of the servers that comprises a cluster
+
+
+### Partitioning
+
++ A scaling strategy
++ Done in teh Producer by a pluggable class and a message key
++ Order is maintained in-partition only
+
+### ZooKeeper
+
++ Required part of Kafka architecture
++ Producers use it to find partitions and replication information
++ Consumers use it to track current index
+
+### Replication
+
++ Brokers can fail
++ Configurable in-sync replica sets
++ One leader, n-1 followers
++ Only the leader communicates with clients
++ When the leader failed, a new leader is elected
 
 
 
