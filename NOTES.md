@@ -202,6 +202,19 @@ ACID Transactions
 + When the leader failed, a new leader is elected
 
 
+## Vector Clocks
+
++ A means of proving sequence
++ Not a means of telling the time
++ We are concurrently modifying one value
++ Every actor has an ID
++ Every actor tracks a sequence number
++ Consider Basho's famous example
++ Can not be wrong(LWW(Last Write Win) can)
++ Push complexity into the client
+
+> [why vector clocks are easy](http://basho.com/why-vector-clocks-are-easy/)
+> [why cassandra doesn't need vector clocks](http://www.datastax.com/dev/blog/why-cassandra-doesn't-need-vector-clocks)
 
 
 
