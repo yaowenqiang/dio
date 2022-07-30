@@ -217,5 +217,44 @@ ACID Transactions
 > [why cassandra doesn't need vector clocks](http://www.datastax.com/dev/blog/why-cassandra-doesn't-need-vector-clocks)
 
 
+## Zookeeper
+
++ Highly available
++ Manages shared state of any kind
++ Transaction control
++ Lock management
+
+### Architecture
+
++ Written in Java
++ Official APIs in C and Java
++ In-memory (on heap)
++ Minimum of three nodes for production
++ All nodes participate
+
+### Zookeeper Ensemble
+
+### Znodes
+
++ A byte-array (10K max)
++ Timestamped
++ indenpent, non-inherited ACLs
++ Versioned
++ Zero or more child ZNodes
++ Persistent or session-ephemeral
++ Counting ZNodes
+
+### Sessions
+
++ Connection between the client and a node in the ensemble
++ Ephemeral nodes live and die with sessions
+
+### Watches
+
++ One-time triggers on ZNode values or children
++ Asynchronous
++ Guaranteed to be seen by the client before the date change
+
+
 
 
